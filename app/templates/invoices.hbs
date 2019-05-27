@@ -1,3 +1,9 @@
-{{#each this.model as |invoice|}}
-  <Invoice @invoice={{invoice}} />
-{{/each}}
+<ul class="results">
+  {{#each filteredResults as |invoice|}}
+  <li>
+    <Invoice @invoice={{invoice}} />
+  </li>
+  {{/each}}
+</ul>
+</InvoiceFilter>
+{{outlet}}
