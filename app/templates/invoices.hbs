@@ -1,13 +1,3 @@
 {{#each this.model as |invoice|}}
-  <article class="invoice">
-    <div class="details">
-      <h3>{{invoice.title}}</h3>
-      <div class="amount">
-        <span>Amount:</span> {{invoice.amount}}
-      </div>
-      <div class="date">
-        <span>Date:</span> {{invoice.date}}
-      </div>
-    </div>
-  </article>
+  <Invoice @invoice={{invoice}} />
 {{/each}}
