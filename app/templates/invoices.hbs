@@ -1,9 +1,10 @@
-<ul class="results">
-  {{#each filteredResults as |invoice|}}
-  <li>
-    <Invoice @invoice={{invoice}} />
-  </li>
-  {{/each}}
-</ul>
+<InvoiceFilter @filter={{action "filterByDate"}} as |filteredResults|>
+  <ul class="results">
+    {{#each filteredResults as |invoice|}}
+      <li>
+        <Invoice @invoice={{invoice}} />
+      </li>
+    {{/each}}
+  </ul>
 </InvoiceFilter>
 {{outlet}}
