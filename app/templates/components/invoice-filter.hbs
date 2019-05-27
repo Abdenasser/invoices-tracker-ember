@@ -1,1 +1,6 @@
-{{yield}}
+{{input
+  value=this.value
+  key-up=(action "handleFilterEntry")
+  placeholder="Filter By Date ex: dd/mm/yyyy"
+}}
+{{yield this.results}}
